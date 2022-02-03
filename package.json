@@ -1,5 +1,6 @@
 {
   "name": "training-shop",
+  "homepage": "https://episod86.github.io/training-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
