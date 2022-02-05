@@ -1,0 +1,36 @@
+.footerInform {
+  background-color: #f8f8f8;
+  padding: 12px 0;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px, 0;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 22px;
+  color: #121212;
+  opacity: 0.8;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  margin-right: 12px;
+}
+.content a {
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: right;
+  text-decoration-line: underline;
+  color: #121212;
+  opacity: 0.8;
+}
