@@ -1,0 +1,33 @@
+.topBar {
+  background: #121212;
+  padding: 6px 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 12px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+.contactItem:nth-child(2) {
+  font-family: Inter;
+  line-height: 13px;
+  letter-spacing: 0.03em;
+}
+
+.socialNetwork {
+  display: flex;
+  align-items: center;
+}
+.socialNetworkItem {
+  padding-right: 12px;
+}
+.socialNetworkItem:last-child {
+  padding-right: 0;
+}
