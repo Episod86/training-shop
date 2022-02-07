@@ -17,7 +17,7 @@ export const FooterContact = () => {
               Join Us
             </button>
           </div>
-          <SocialNetwork />
+          <SocialNetwork size="18" />
         </div>
       </div>
     </div>

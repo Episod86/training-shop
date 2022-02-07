@@ -5,7 +5,7 @@ import { TopBar } from "./top-bar";
 export const Header = () => {
   return (
     <div className={style.header} data-test-id="header">
-      <TopBar />
+      <TopBar size="14" />
 
       <HeaderMenu />
     </div>

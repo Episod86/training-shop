@@ -9,7 +9,12 @@ export const FooterInform = () => {
           <div className={style.text}>Copyright © 2032 all rights reserved</div>
           <div className={style.icons}>
             {footerIcons.map(({ key, alt, imageSrc }) => (
-              <img src={imageSrc} alt={alt} key={key} />
+              <img
+                src={imageSrc}
+                alt={alt}
+                key={key}
+                className={style.iconImg}
+              />
             ))}
           </div>
           <a href="https://clevertec.ru/study/frontend.html">
