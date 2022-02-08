@@ -1,0 +1,123 @@
+.header-product {
+  background: #f8f8f8;
+
+  .header-product-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+
+    .links {
+      display: flex;
+      gap: 6px;
+
+      .previous {
+        opacity: 0.6;
+      }
+    }
+
+    .share {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .share-text {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding-top: 10px;
+  }
+  .subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+
+    .rating {
+      display: flex;
+      align-items: center;
+      padding-bottom: 6px;
+      .review {
+        opacity: 0.6;
+        padding-left: 6px;
+      }
+    }
+    .inform {
+      display: flex;
+      gap: 24px;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 18px;
+      .inform-normal {
+        opacity: 0.6;
+      }
+      .inform-bold {
+        font-weight: bold;
+        padding-left: 2px;
+      }
+    }
+  }
+}
+.related-products {
+  padding: 48px 0;
+
+  .related-products-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+
+    .title {
+      padding: 8px 0;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0.06em;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  .related-produts-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    .item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 16px;
+      line-height: 16px;
+
+      .item-text-title {
+        opacity: 0.6;
+      }
+      .item-text-inform {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-text-price {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

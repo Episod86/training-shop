@@ -1,5 +1,6 @@
 // import { MainPage } from "../../pages/main-page";
-import { ProductPage } from "../../pages/product-page/main-page";
+// import { ProductPage } from "../../pages/product-page/main-page";
+import { ProductPage } from "../../pages/product-page/product-page";
 import { Footer } from "../footer";
 import { Header } from "../header";
 
