@@ -7,7 +7,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+button,
+button:active,
+button:focus {
+  outline: none;
+}
 ul {
   list-style-type: none;
 }

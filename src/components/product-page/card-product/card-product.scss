@@ -1,0 +1,215 @@
+.card-product {
+  display: grid;
+  grid-template-columns: minmax(558px, 1fr) 1fr;
+  column-gap: 30px;
+  padding: 32px 0 48px;
+  font-size: 12px;
+  line-height: 18px;
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-height: 560px;
+    .slider-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      .navigation {
+        display: flex;
+        gap: 14px;
+      }
+    }
+  }
+  .inform {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .informName {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+
+      .text {
+        text-transform: uppercase;
+        opacity: 0.6;
+        padding-right: 4px;
+      }
+      .inform-img {
+        display: flex;
+        justify-content: flex-start;
+        gap: 16px;
+        padding-top: 16px;
+      }
+      .color {
+        padding-bottom: 16px;
+      }
+      &:first-child {
+        padding-top: 3px;
+      }
+      .size-guide {
+        display: flex;
+        align-items: center;
+        padding-top: 12px;
+
+        .text-size-guide {
+          font-weight: 500;
+          padding-left: 8px;
+          opacity: 0.6;
+        }
+      }
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border-top: 2px solid #e6e6e6;
+      border-bottom: 2px solid #e6e6e6;
+      margin: 16px 0;
+      .price-bold {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 36px;
+        text-transform: uppercase;
+      }
+      .btn-price {
+        background: #121212;
+        border: 2px solid #121212;
+        padding: 17px 24px 16px;
+        margin: 32px 0;
+        border: none;
+        // box-sizing: border-box;
+
+        .text {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 15px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: #ffffff;
+          opacity: 0.9;
+        }
+      }
+      img {
+        padding-left: 4px;
+      }
+    }
+    .service {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+
+      opacity: 0.6;
+      .service-item {
+        display: flex;
+        align-items: center;
+        padding-left: 6px;
+      }
+    }
+    .checkout {
+      padding: 16px 0;
+      .title {
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding-bottom: 23px;
+      }
+      .checkout-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .description {
+      border-top: 2px solid #e6e6e6;
+      border-bottom: 2px solid #e6e6e6;
+      margin: 16px 0;
+      padding: 32px 0;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+    .additional-information {
+      .title {
+        padding-bottom: 32px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .item {
+        padding-bottom: 12px;
+        font-size: 14px;
+        line-height: 22px;
+        .bold {
+          font-weight: 500;
+          padding-right: 4px;
+        }
+        .value {
+          opacity: 0.6;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .reviews {
+      border-top: 2px solid #e6e6e6;
+      border-bottom: 2px solid #e6e6e6;
+      margin: 16px 0 32px;
+      padding: 32px 0;
+      .title {
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding-bottom: 32px;
+      }
+      .write-review {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 24px;
+        .rating {
+          display: flex;
+          align-items: center;
+          padding-right: 8px;
+          .review {
+            font-weight: 500;
+            font-size: 11px;
+            opacity: 0.6;
+            padding-left: 6px;
+          }
+        }
+        span {
+          opacity: 0.6;
+        }
+      }
+      .item {
+        display: flex;
+        flex-direction: column;
+        .title-reviews {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 12px;
+
+          span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+        .text {
+          font-size: 14px;
+          line-height: 22px;
+          opacity: 0.8;
+        }
+        &:first-child {
+          padding-bottom: 48px;
+        }
+      }
+    }
+  }
+}

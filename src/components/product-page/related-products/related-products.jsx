@@ -1,7 +1,7 @@
 import { productItem } from "../../../constants/product";
 
-import prevImg from "../../../images/product-page/related-products/button-prev.svg";
-import nextImg from "../../../images/product-page/related-products/button-next.svg";
+import prevImg from "../../../images/product-page//button-prev.svg";
+import nextImg from "../../../images/product-page/button-next.svg";
 import ratingSrc from "../../../images/product-page/related-products/rating-img.svg";
 
 import "./related-products.scss";
@@ -19,7 +19,7 @@ export const RelatedProducts = () => {
 
       <div className="related-produts-items">
         {productItem.map(({ key, title, price, imageSrc }) => (
-          <div key={key}>
+          <div className="item" key={key}>
             <img src={imageSrc} alt="photoProduct" />
             <div className="item-text">
               <div className="item-text-title">{title}</div>
