@@ -4,11 +4,12 @@ import { RelatedProducts } from "../../components/product-page/related-products"
 
 export const ProductPage = () => {
   return (
-    <div className="wrapper">
+    <div>
       <HeaderProduct />
-      <CardProduct />
-
-      <RelatedProducts />
+      <div className="wrapper">
+        <CardProduct />
+        <RelatedProducts />
+      </div>
     </div>
   );
 };
