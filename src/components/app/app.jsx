@@ -1,7 +1,8 @@
-// import { MainPage } from "../../pages/main-page";
+import { MainPage } from "../../pages/main-page";
 // import { ProductPage } from "../../pages/product-page/main-page";
+import { Route, Switch } from "react-router-dom";
 import { ProductPage } from "../../pages/product-page/product-page";
-// import { ProductsPage } from "../../pages/products-page";
+import { ProductsPage } from "../../pages/products-page";
 import { Footer } from "../footer";
 import { Header } from "../header";
 
@@ -11,12 +12,20 @@ export const App = () => {
   return (
     <div className="app" data-test-id="app">
       <Header />
-      {/* <MainPage /> */}
-
-      <ProductPage />
-      {/* <ProductsPage typeCategories="women" /> */}
-      {/* <ProductsPage typeCategories="men" /> */}
-
+      <Switch>
+        <Route exact path="/">
+          <MainPage />
+        </Route>
+        <Route exact path="/women">
+          <ProductsPage typeCategories="women" />{" "}
+        </Route>
+        <Route exact path="/men">
+          <ProductsPage typeCategories="men" />{" "}
+        </Route>
+        <Route path="/women/">
+          <ProductPage />
+        </Route>
+      </Switch>
       <Footer />
     </div>
   );
