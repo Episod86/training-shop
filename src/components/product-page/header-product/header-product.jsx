@@ -1,5 +1,5 @@
 import ratingHeaderSrc from "../../../images/product-page/header-product/rating-five.svg";
-import shareSrc from "../../../images/product-page/header-product/share.svg";
+import shareSrc from "../../../images/share.svg";
 
 import "./header-product.scss";
 

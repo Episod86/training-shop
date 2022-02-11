@@ -1,6 +1,7 @@
 // import { MainPage } from "../../pages/main-page";
 // import { ProductPage } from "../../pages/product-page/main-page";
-import { ProductPage } from "../../pages/product-page/product-page";
+// import { ProductPage } from "../../pages/product-page/product-page";
+import { ProductsPage } from "../../pages/products-page";
 import { Footer } from "../footer";
 import { Header } from "../header";
 
@@ -12,7 +13,10 @@ export const App = () => {
       <Header />
       {/* <MainPage /> */}
 
-      <ProductPage />
+      {/* <ProductPage /> */}
+      {/* <ProductsPage typeCategories="women" /> */}
+      <ProductsPage typeCategories="men" />
+
       <Footer />
     </div>
   );

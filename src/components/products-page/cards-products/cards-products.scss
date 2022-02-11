@@ -1,0 +1,39 @@
+.cards-products {
+  display: flex;
+  flex-direction: column;
+  .cards {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: 30px;
+    .item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 16px;
+      line-height: 16px;
+
+      .item-text-title {
+        opacity: 0.6;
+      }
+      .item-text-inform {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-text-price {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+    padding: 48px 0 80px;
+  }
+}
