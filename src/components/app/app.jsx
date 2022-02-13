@@ -17,10 +17,10 @@ export const App = () => {
           <MainPage />
         </Route>
         <Route exact path="/women">
-          <ProductsPage typeCategories="women" />{" "}
+          <ProductsPage typeCategories="women" />
         </Route>
         <Route exact path="/men">
-          <ProductsPage typeCategories="men" />{" "}
+          <ProductsPage typeCategories="men" />
         </Route>
         <Route path="/women/">
           <ProductPage />

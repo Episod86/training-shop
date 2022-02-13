@@ -1,0 +1,45 @@
+.footer-contact {
+  background: #121212;
+  padding: 12px 0;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .email {
+      display: flex;
+      gap: 12px;
+      .input {
+        background: #ffffff;
+        min-width: 400px;
+        min-height: 32px;
+        border: none;
+        opacity: 0.2;
+        font-size: 13px;
+        line-height: 18px;
+        color: #ffffff;
+        padding: 7px 16px;
+      }
+    }
+    .button {
+      border: 1px solid #ffffff;
+      background-color: #121212;
+      min-width: 108px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.9;
+      padding: 6px 24px;
+    }
+  }
+}
