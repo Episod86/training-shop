@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/training-shop/static/css/main.0f8ac585.css",
-    "main.js": "/training-shop/static/js/main.661255c0.js",
+    "main.css": "/training-shop/static/css/main.0b48a90c.css",
+    "main.js": "/training-shop/static/js/main.c1b94fef.js",
     "static/media/easiest.jpg": "/training-shop/static/media/easiest.5cad0183f33abe4f2f35.jpg",
     "static/media/product-image.jpg": "/training-shop/static/media/product-image.6b097a1dcd9c26ced50a.jpg",
     "static/media/wedding.jpg": "/training-shop/static/media/wedding.653a844b906171bd2ee2.jpg",
@@ -61,11 +61,11 @@
     "static/media/button-next.svg": "/training-shop/static/media/button-next.f9eca5d1dfab498f759cb2d9c603dec6.svg",
     "static/media/button-prev.svg": "/training-shop/static/media/button-prev.b1111ee19ab8cf8c97e9b83f54437075.svg",
     "static/media/view-list.svg": "/training-shop/static/media/view-list.f1d242843fc15f61cc5abf04d2079f81.svg",
-    "main.0f8ac585.css.map": "/training-shop/static/css/main.0f8ac585.css.map",
-    "main.661255c0.js.map": "/training-shop/static/js/main.661255c0.js.map"
+    "main.0b48a90c.css.map": "/training-shop/static/css/main.0b48a90c.css.map",
+    "main.c1b94fef.js.map": "/training-shop/static/js/main.c1b94fef.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f8ac585.css",
-    "static/js/main.661255c0.js"
+    "static/css/main.0b48a90c.css",
+    "static/js/main.c1b94fef.js"
   ]
 }
