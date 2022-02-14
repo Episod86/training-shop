@@ -1,29 +1,29 @@
-import newSeasonImg from "../images/main/news/new-season.jpg";
-import saleImg from "../images/main/news/sale.jpg";
+// import newSeasonImg from "../images/main/news/new-season.jpg";
+// import saleImg from "../images/main/news/sale.jpg";
 
 import easiestImg from "../images/main/blog/easiest.jpg";
 import weddingImg from "../images/main/blog/wedding.jpg";
 import favoritesImg from "../images/main/blog/favorites.jpg";
 
-export const mainNews = [
-  {
-    key: "1",
-    href: "#!",
-    title: "New Season",
-    text: "lookbook collection",
+// export const mainNews = [
+//   {
+//     key: "1",
+//     href: "#!",
+//     title: "New Season",
+//     text: "lookbook collection",
 
-    imageSrc: newSeasonImg,
-    alt: "new-season",
-  },
-  {
-    key: "2",
-    href: "#!",
-    title: "Sale",
-    text: "Get UP to 50% off",
-    imageSrc: saleImg,
-    alt: "sale",
-  },
-];
+//     imageSrc: newSeasonImg,
+//     alt: "new-season",
+//   },
+//   {
+//     key: "2",
+//     href: "#!",
+//     title: "Sale",
+//     text: "Get UP to 50% off",
+//     imageSrc: saleImg,
+//     alt: "sale",
+//   },
+// ];
 
 export const mainBlog = [
   {

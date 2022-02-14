@@ -1,13 +1,18 @@
 import { MainBlog } from "../../components/main-page/main-blog";
-import { MainNews } from "../../components/main-news";
+import { MainNews } from "../../components/main-page/main-news/main-news";
 import { MainSubscribe } from "../../components/main-page/main-subscribe";
 
 export const MainPage = () => {
   return (
-    <div className="wrapper">
+    <div>
+      {/* <div className="wrapper">
+        
+      </div> */}
       <MainNews />
       <MainSubscribe />
-      <MainBlog />
+      <div className="wrapper">
+        <MainBlog />
+      </div>
     </div>
   );
 };
