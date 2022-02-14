@@ -1,8 +1,3 @@
-// import { mainHeaderImg } from "../../../constants/main";
-// import banner from "../../../images/main/header/banner.jpg";
-// import women from "../../../images/main/header/women.jpg";
-// import men from "../../../images/main/header/men.jpg";
-// import accessories from "../images/main/header/accessories.jpg";
 import prevImg from "../../../images/product-page//button-prev.svg";
 import nextImg from "../../../images/product-page/button-next.svg";
 import "./main-header.scss";

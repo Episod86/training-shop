@@ -75,8 +75,27 @@
 }
 
 @media all and (max-width: 960px) {
-  .woman,
-  .man {
+  .main-subscribe .subscribe-block .women,
+  .men {
     display: none;
+  }
+}
+
+@media all and (max-width: 570px) {
+  .main-subscribe .subscribe-block .block {
+    padding: 20px 24px 24px;
+    .title {
+      font-size: 10px;
+    }
+    .subtitle {
+      padding: 8px 0 16px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .input,
+    .button {
+      padding: 12px 0;
+      min-width: 240px;
+    }
   }
 }
