@@ -1,0 +1,72 @@
+.clothes {
+  padding: 48px 0;
+  .clothes-header {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 13px;
+      letter-spacing: 0.06em;
+      .item {
+        &:not(:first-child) {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  .clothes-cards {
+    padding: 48px 0;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: 30px;
+    .item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 16px;
+      line-height: 16px;
+
+      .item-text-title {
+        opacity: 0.6;
+      }
+      .item-text-inform {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-text-price {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .button {
+    background: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    padding: 16px 0;
+    max-height: 48px;
+  }
+}

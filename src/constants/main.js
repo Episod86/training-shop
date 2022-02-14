@@ -1,30 +1,56 @@
-// import newSeasonImg from "../images/main/news/new-season.jpg";
-// import saleImg from "../images/main/news/sale.jpg";
+import truck from "../images/main/advantage/truck.svg";
+import refresh from "../images/main/advantage/refresh.svg";
+import support from "../images/main/advantage/support.svg";
 
 import easiestImg from "../images/main/blog/easiest.jpg";
 import weddingImg from "../images/main/blog/wedding.jpg";
 import favoritesImg from "../images/main/blog/favorites.jpg";
 
-// export const mainNews = [
-//   {
-//     key: "1",
-//     href: "#!",
-//     title: "New Season",
-//     text: "lookbook collection",
-
-//     imageSrc: newSeasonImg,
-//     alt: "new-season",
-//   },
-//   {
-//     key: "2",
-//     href: "#!",
-//     title: "Sale",
-//     text: "Get UP to 50% off",
-//     imageSrc: saleImg,
-//     alt: "sale",
-//   },
-// ];
-
+export const advantage = [
+  {
+    key: "1",
+    title: "FREE SHIPPING",
+    text: "On all UA order or order above $100",
+    imageSrc: truck,
+    alt: "truck",
+  },
+  {
+    key: "2",
+    title: "30 DAYS RETURN",
+    text: "Simply return it within 30 days for an exchange",
+    imageSrc: refresh,
+    alt: "refresh ",
+  },
+  {
+    key: "3",
+    title: "SUPPORT 24/7",
+    text: "Contact us 24 hours a day, 7 days a week",
+    imageSrc: support,
+    alt: "support",
+  },
+];
+export const clothesMenu = [
+  {
+    id: "1",
+    name: "NEW ARRIVALS",
+  },
+  {
+    id: "2",
+    name: "SPECIALS",
+  },
+  {
+    id: "3",
+    name: "BESTSELLERS",
+  },
+  {
+    id: "4",
+    name: "MOST VIEWED",
+  },
+  {
+    id: "5",
+    name: "FEATURED PRODUCTS",
+  },
+];
 export const mainBlog = [
   {
     key: "1",

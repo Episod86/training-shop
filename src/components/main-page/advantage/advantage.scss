@@ -1,0 +1,29 @@
+.advantage {
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .advantage-item {
+    display: flex;
+    align-items: center;
+    margin: 34px 0 32px;
+    .advantage-item-text {
+      padding-left: 8px;
+      .advantage-title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+      }
+      .advantage-text {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 22px;
+        opacity: 0.9;
+      }
+    }
+  }
+}
