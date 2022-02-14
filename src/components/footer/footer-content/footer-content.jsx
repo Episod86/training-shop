@@ -12,7 +12,7 @@ export const FooterContent = () => {
             {items.map(({ text, href }, index) => (
               <Link
                 to={`/${href}`}
-                data-test-id=""
+                data-test-id={`footer-nav-link-${href}`}
                 className="item"
                 key={index.toString()}
               >
