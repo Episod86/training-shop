@@ -1,0 +1,43 @@
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-logo {
+    font-family: Playfair Display SC;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .menu {
+    display: flex;
+    .menu-item {
+      line-height: 16px;
+      align-items: center;
+      padding: 25px 16px;
+    }
+  }
+  .useful-links {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .header-menu {
+    .header-logo {
+      font-size: 18px;
+    }
+    .menu .menu-item {
+      font-size: 10px;
+      padding: 12px 6px;
+    }
+    .useful-links {
+      gap: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 660px) {
+  .menu .menu-item {
+    display: none;
+  }
+}

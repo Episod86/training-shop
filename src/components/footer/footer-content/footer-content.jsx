@@ -2,6 +2,7 @@ import { contactUs, footerMenu } from "../../../constants/footer";
 import { Link } from "react-router-dom";
 
 import "./footer-content.scss";
+
 export const FooterContent = () => {
   return (
     <div className="footer-content">
@@ -9,7 +10,12 @@ export const FooterContent = () => {
         {footerMenu.map(({ key, items }) => (
           <div className="items" key={key}>
             {items.map(({ text, href }, index) => (
-              <Link to={`/${href}`} className="item" key={index.toString()}>
+              <Link
+                to={`/${href}`}
+                data-test-id=""
+                className="item"
+                key={index.toString()}
+              >
                 {text}
               </Link>
             ))}

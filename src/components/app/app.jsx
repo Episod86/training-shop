@@ -1,7 +1,6 @@
 import { MainPage } from "../../pages/main-page";
-// import { ProductPage } from "../../pages/product-page/main-page";
 import { Route, Switch } from "react-router-dom";
-import { ProductPage } from "../../pages/product-page/product-page";
+import { ProductPage } from "../../pages/product-page";
 import { ProductsPage } from "../../pages/products-page";
 import { Footer } from "../footer";
 import { Header } from "../header";

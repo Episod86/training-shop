@@ -59,11 +59,11 @@ export const footerMenu = [
       },
       {
         text: "Men",
-        href: "#!",
+        href: "men",
       },
       {
         text: "Women",
-        href: "#!",
+        href: "women",
       },
       {
         text: "Accessories",

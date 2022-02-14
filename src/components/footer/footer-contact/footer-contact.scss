@@ -43,3 +43,19 @@
     }
   }
 }
+
+@media all and (max-width: 880px) {
+  .footer-contact .wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .footer-contact .wrapper .email {
+    flex-direction: column;
+    .input {
+      min-width: 300px;
+    }
+  }
+}
