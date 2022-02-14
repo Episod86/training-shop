@@ -1,4 +1,5 @@
-import { mainBlog } from "../../constants/main";
+import { mainBlog } from "../../../constants/main";
+
 import "./main-blog.scss";
 
 export const MainBlog = () => {
