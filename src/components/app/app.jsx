@@ -16,16 +16,16 @@ export const App = () => {
           <MainPage />
         </Route>
         <Route exact path="/women">
-          <ProductsPage typeCategories="women" />
+          <ProductsPage productType="women" />
         </Route>
         <Route exact path="/men">
-          <ProductsPage typeCategories="men" />
+          <ProductsPage productType="men" />
         </Route>
         <Route path="/women/:id">
-          <ProductPage />
+          <ProductPage productType="women" />
         </Route>
         <Route path="/men/:id">
-          <ProductPage />
+          <ProductPage productType="men" />
         </Route>
       </Switch>
       <Footer />

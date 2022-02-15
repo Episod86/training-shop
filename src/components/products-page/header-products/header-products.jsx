@@ -2,7 +2,7 @@ import shareSrc from "../../../images/share.svg";
 
 import "./header-products.scss";
 
-export const HeaderProducts = ({ typeCategories }) => {
+export const HeaderProducts = ({ productType }) => {
   return (
     <div className="header-products">
       <div className="wrapper">
@@ -10,7 +10,7 @@ export const HeaderProducts = ({ typeCategories }) => {
           <div className="links">
             <span className="previous">Home</span>
             <span>►</span>
-            <span className="previous categories">{typeCategories}</span>
+            <span className="previous categories">{productType}</span>
           </div>
           <div className="share">
             <img src={shareSrc} alt="share" />
@@ -18,7 +18,7 @@ export const HeaderProducts = ({ typeCategories }) => {
           </div>
         </div>
         <div className="title">
-          <span>{typeCategories}</span>
+          <span>{productType}</span>
         </div>
       </div>
     </div>

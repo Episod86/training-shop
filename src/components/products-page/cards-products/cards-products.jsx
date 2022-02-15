@@ -4,12 +4,12 @@ import ratingSrc from "../../../images/products-page/cards-products/rating4.svg"
 import "./cards-products.scss";
 import { Link } from "react-router-dom";
 
-export const CardsProducts = ({ typeCategories }) => {
+export const CardsProducts = ({ productType }) => {
   return (
     <div className="cards-products">
       <div className="cards">
-        {cards[typeCategories].map(({ id, title, price, imageSrc }) => (
-          <Link to={`/${typeCategories}/${id}`} className="item" key={id}>
+        {cards[productType].map(({ id, title, price, imageSrc }) => (
+          <Link to={`/${productType}/${id}`} className="item" key={id}>
             <img src={imageSrc} alt="photoProduct" />
             <div className="item-text">
               <div className="item-text-title">{title}</div>
