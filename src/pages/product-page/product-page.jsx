@@ -4,10 +4,10 @@ import { RelatedProducts } from "../../components/product-page/related-products"
 
 export const ProductPage = ({ productType }) => {
   return (
-    <div>
+    <div  data-test-id={`product-page-${productType}`} >
       <HeaderProduct />
       <div className="wrapper">
-        <CardProduct data-test-id={`product-page-${productType}`} />
+        <CardProduct/>
         <RelatedProducts />
       </div>
     </div>
