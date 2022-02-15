@@ -37,3 +37,19 @@
     padding: 48px 0 80px;
   }
 }
+
+@media all and (max-width: 1160px) {
+  .cards-products .cards {
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 600px) {
+  .cards-products {
+    .cards {
+      grid-template: repeat(8, 1fr) / 1fr;
+    }
+    .loading {
+      padding: 24px 0 40px;
+    }
+  }
+}

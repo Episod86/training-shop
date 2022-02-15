@@ -7,8 +7,8 @@ export const CardsProducts = ({ typeCategories }) => {
   return (
     <div className="cards-products">
       <div className="cards">
-        {cards[typeCategories].map(({ key, title, price, imageSrc }) => (
-          <div className="item" key={key}>
+        {cards[typeCategories].map(({ id, title, price, imageSrc }) => (
+          <div className="item" key={id}>
             <img src={imageSrc} alt="photoProduct" />
             <div className="item-text">
               <div className="item-text-title">{title}</div>

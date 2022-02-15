@@ -4,7 +4,7 @@ import { HeaderProducts } from "../../components/products-page/header-products";
 
 export const ProductsPage = ({ typeCategories }) => {
   return (
-    <div>
+    <div data-test-id={`products-page-${typeCategories}`}>
       <HeaderProducts typeCategories={typeCategories} />
       <div className="wrapper">
         <FilterProducts />
