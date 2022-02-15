@@ -1,7 +1,7 @@
-import facebookLogo from "../images/social-network/logo-facebook.svg";
-import twitterLogo from "../images/social-network/logo-twitter.svg";
-import instagramLogo from "../images/social-network/logo-instagram.svg";
-import pinterestLogo from "../images/social-network/logo-pinterest.svg";
+import facebookLogo from "../components/social-network/images/logo-facebook.svg";
+import twitterLogo from "../components/social-network/images/logo-twitter.svg";
+import instagramLogo from "../components/social-network/images/logo-instagram.svg";
+import pinterestLogo from "../components/social-network/images/logo-pinterest.svg";
 
 export const socialNetwork = [
   {

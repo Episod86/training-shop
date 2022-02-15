@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 import { socialNetwork } from "../../constants/social-network";
+
 import "./social-network.scss";
 
 export const SocialNetwork = ({ size }) => {
@@ -11,4 +14,11 @@ export const SocialNetwork = ({ size }) => {
       ))}
     </div>
   );
+};
+
+SocialNetwork.propTypes = {
+  size: PropTypes.string,
+};
+SocialNetwork.defaultProps = {
+  size: "14",
 };
