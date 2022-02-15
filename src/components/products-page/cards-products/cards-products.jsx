@@ -2,13 +2,14 @@ import { cards } from "../../../constants/products";
 import loadig from "../../../images/products-page/cards-products/Square-Loading.png";
 import ratingSrc from "../../../images/products-page/cards-products/rating4.svg";
 import "./cards-products.scss";
+import { Link } from "react-router-dom";
 
 export const CardsProducts = ({ typeCategories }) => {
   return (
     <div className="cards-products">
       <div className="cards">
         {cards[typeCategories].map(({ id, title, price, imageSrc }) => (
-          <div className="item" key={id}>
+          <Link to={`/${typeCategories}/${id}`} className="item" key={id}>
             <img src={imageSrc} alt="photoProduct" />
             <div className="item-text">
               <div className="item-text-title">{title}</div>
@@ -17,7 +18,7 @@ export const CardsProducts = ({ typeCategories }) => {
                 <img src={ratingSrc} alt="rating" />
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="loading">

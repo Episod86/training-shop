@@ -24,6 +24,9 @@ export const App = () => {
         <Route path="/women/:id">
           <ProductPage />
         </Route>
+        <Route path="/men/:id">
+          <ProductPage />
+        </Route>
       </Switch>
       <Footer />
     </div>

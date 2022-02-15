@@ -22,7 +22,12 @@ export const Clothes = ({ productType }) => {
         data-test-id={`clothes-cards-${productType}`}
       >
         {cards[productType].map(({ id, title, price, imageSrc }) => (
-          <div className="item" key={id}>
+          <Link
+            to={`/${productType}/${id}`}
+            className="item"
+            key={id}
+            data-test-id={`clothes-card-${productType}`}
+          >
             <img src={imageSrc} alt="photoProduct" />
             <div className="item-text">
               <div className="item-text-title">{title}</div>
@@ -31,7 +36,7 @@ export const Clothes = ({ productType }) => {
                 <img src={ratingSrc} alt="rating" />
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <Link to={`/${productType}`} className="cards-link">
