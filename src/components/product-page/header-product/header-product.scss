@@ -72,3 +72,19 @@
     }
   }
 }
+
+@media all and (max-width: 570px) {
+  .header-product {
+    .header-product-nav {
+      flex-direction: column;
+    }
+    .title {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .subtitle {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}

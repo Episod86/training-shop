@@ -21,8 +21,8 @@ export const Clothes = ({ productType }) => {
         className="clothes-cards"
         data-test-id={`clothes-cards-${productType}`}
       >
-        {cards[productType].map(({ key, title, price, imageSrc }) => (
-          <div className="item" key={key}>
+        {cards[productType].map(({ id, title, price, imageSrc }) => (
+          <div className="item" key={id}>
             <img src={imageSrc} alt="photoProduct" />
             <div className="item-text">
               <div className="item-text-title">{title}</div>

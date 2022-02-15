@@ -21,7 +21,7 @@ export const App = () => {
         <Route exact path="/men">
           <ProductsPage typeCategories="men" />
         </Route>
-        <Route path="/women/">
+        <Route path="/women/:id">
           <ProductPage />
         </Route>
       </Switch>
