@@ -1,4 +1,5 @@
-import ratingHeaderSrc from "../../../images/product-page/header-product/rating-five.svg";
+import { Rating } from "../../rating/rating";
+
 import shareSrc from "../../../images/share.svg";
 
 import "./header-product.scss";
@@ -25,13 +26,13 @@ export const HeaderProduct = () => {
         </div>
         <div className="subtitle">
           <div className="rating">
-            <img src={ratingHeaderSrc} alt="rating" height="18px" />
+            <Rating rating={5} size="18px" />
             <span className="review">2 Reviews</span>
           </div>
           <div className="inform">
-            <span className="inform-normal">SKU:</span>{" "}
+            <span className="inform-normal">SKU:</span>
             <span className="inform-bold">777</span>
-            <span className="inform-normal">Availability:</span>{" "}
+            <span className="inform-normal">Availability:</span>
             <span className="inform-bold">In Stock</span>
           </div>
         </div>

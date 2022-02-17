@@ -1,3 +1,5 @@
+import { Rating } from "../../rating/rating";
+
 import {
   colorImg,
   sizeImg,
@@ -13,7 +15,6 @@ import mainPhoto from "../../../images/product-page/card-product/product-image.j
 import clothesHanger from "../../../images/product-page/card-product/clothes-hanger.svg";
 import heartImg from "../../../images/product-page/card-product/heart.svg";
 import scaleImg from "../../../images/product-page/card-product/scale.svg";
-import ratingHeaderSrc from "../../../images/product-page/header-product/rating-five.svg";
 
 import "./card-product.scss";
 
@@ -107,7 +108,7 @@ export const CardProduct = () => {
           <div className="title">REVIEWS</div>
           <div className="write-review">
             <div className="rating">
-              <img src={ratingHeaderSrc} alt="rating" height="22px" />
+              <Rating rating={5} size="22px" />
               <span className="review">2 Reviews</span>
             </div>
             <span>Write a review</span>
@@ -117,8 +118,7 @@ export const CardProduct = () => {
               <div key={key} className="item">
                 <div className="title-reviews">
                   <span>{name}</span>
-
-                  <img src={ratingHeaderSrc} alt="rating" height="14px" />
+                  <Rating rating={5} size="14px" />
                 </div>
                 <span className="text">{text}</span>
               </div>

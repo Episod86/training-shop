@@ -1,8 +1,9 @@
+import { Rating } from "../../rating/rating";
+
 import { productItem } from "../../../constants/product";
 
 import prevImg from "../../../images/product-page//button-prev.svg";
 import nextImg from "../../../images/product-page/button-next.svg";
-import ratingSrc from "../../../images/product-page/related-products/rating-img.svg";
 
 import "./related-products.scss";
 
@@ -25,7 +26,7 @@ export const RelatedProducts = () => {
               <div className="item-text-title">{title}</div>
               <div className="item-text-inform">
                 <div className="item-text-price">{price}</div>
-                <img src={ratingSrc} alt="rating" />
+                <Rating rating={4} size="14px" />
               </div>
             </div>
           </div>

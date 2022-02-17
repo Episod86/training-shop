@@ -1,5 +1,6 @@
-import { contacts } from "../../../constants/header";
 import { SocialNetwork } from "../../social-network";
+
+import { contacts } from "../../../constants/header";
 
 import "./top-bar.scss";
 

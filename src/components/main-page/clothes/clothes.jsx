@@ -1,7 +1,10 @@
+import { Rating } from "../../rating/rating";
+
 import { Link } from "react-router-dom";
+
 import { clothesMenu } from "../../../constants/main";
 import { cards } from "../../../constants/products";
-import ratingSrc from "../../../images/products-page/cards-products/rating4.svg";
+
 import "./clothes.scss";
 
 export const Clothes = ({ productType }) => {
@@ -33,7 +36,7 @@ export const Clothes = ({ productType }) => {
               <div className="item-text-title">{title}</div>
               <div className="item-text-inform">
                 <div className="item-text-price">{price}</div>
-                <img src={ratingSrc} alt="rating" />
+                <Rating rating={4} size="14px" />
               </div>
             </div>
           </Link>

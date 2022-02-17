@@ -1,8 +1,12 @@
-import { cards } from "../../../constants/products";
-import loadig from "../../../images/products-page/cards-products/Square-Loading.png";
-import ratingSrc from "../../../images/products-page/cards-products/rating4.svg";
-import "./cards-products.scss";
+import { Rating } from "../../rating/rating";
+
 import { Link } from "react-router-dom";
+
+import { cards } from "../../../constants/products";
+
+import loadig from "../../../images/products-page/cards-products/Square-Loading.png";
+
+import "./cards-products.scss";
 
 export const CardsProducts = ({ productType }) => {
   return (
@@ -15,7 +19,7 @@ export const CardsProducts = ({ productType }) => {
               <div className="item-text-title">{title}</div>
               <div className="item-text-inform">
                 <div className="item-text-price">{price}</div>
-                <img src={ratingSrc} alt="rating" />
+                <Rating rating={4} size="14" />
               </div>
             </div>
           </Link>

@@ -1,9 +1,10 @@
-import { MainPage } from "../../pages/main-page";
 import { Route, Switch } from "react-router-dom";
+
+import { Header } from "../header";
+import { MainPage } from "../../pages/main-page";
 import { ProductPage } from "../../pages/product-page";
 import { ProductsPage } from "../../pages/products-page";
 import { Footer } from "../footer";
-import { Header } from "../header";
 
 import "./app.css";
 

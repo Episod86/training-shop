@@ -1,6 +1,6 @@
-import phoneIcon from "../images/header/phone.svg";
-import locationIcon from "../images/header/location.svg";
-import clockIcon from "../images/header/clock.svg";
+import phoneIcon from "../components/header/top-bar/images/phone.svg";
+import locationIcon from "../components/header/top-bar/images/location.svg";
+import clockIcon from "../components/header/top-bar/images/clock.svg";
 
 import search from "../images/header/search.svg";
 import globe from "../images/header/globe.svg";

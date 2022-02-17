@@ -1,10 +1,10 @@
-import truck from "../images/main/advantage/truck.svg";
-import refresh from "../images/main/advantage/refresh.svg";
-import support from "../images/main/advantage/support.svg";
+import truck from "../components/main-page/advantage/images/truck.svg";
+import refresh from "../components/main-page/advantage/images/refresh.svg";
+import support from "../components/main-page/advantage/images/support.svg";
 
-import easiestImg from "../images/main/blog/easiest.jpg";
-import weddingImg from "../images/main/blog/wedding.jpg";
-import favoritesImg from "../images/main/blog/favorites.jpg";
+import easiest from "../components/main-page/main-blog/images/easiest.jpg";
+import wedding from "../components/main-page/main-blog/images/wedding.jpg";
+import favorites from "../components/main-page/main-blog/images/favorites.jpg";
 
 export const advantage = [
   {
@@ -56,21 +56,21 @@ export const mainBlog = [
     key: "1",
     title: "The Easiest Way to Break",
     text: "But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor",
-    imageSrc: easiestImg,
+    imageSrc: easiest,
     alt: "easiest",
   },
   {
     key: "2",
     title: "Wedding Season",
     text: "But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor",
-    imageSrc: weddingImg,
+    imageSrc: wedding,
     alt: "easiest",
   },
   {
     key: "3",
     title: "Recent Favorites On Repeat",
     text: "But I must explain to you how all this mistaken idea of denouncing pleas and praising pain was bor",
-    imageSrc: favoritesImg,
+    imageSrc: favorites,
     alt: "favorites",
   },
 ];
