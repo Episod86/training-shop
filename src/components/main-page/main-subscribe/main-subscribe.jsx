@@ -1,5 +1,6 @@
-import women from "../../../images/main/subscribe/women.png";
-import men from "../../../images/main/subscribe/men.png";
+import women from "./images/women.png";
+import men from "./images/men.png";
+
 import "./main-subscribe.scss";
 
 export const MainSubscribe = () => {

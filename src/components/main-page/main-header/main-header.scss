@@ -8,7 +8,7 @@
   letter-spacing: 0.06em;
 
   .banner {
-    background: no-repeat center url("../../../images/main/header/banner.jpg");
+    background: no-repeat center url("./images/banner.jpg");
     min-height: 490px;
     display: flex;
     justify-content: space-between;
@@ -41,15 +41,15 @@
       gap: 30px;
       .women {
         flex: 1 1 255px;
-        background: no-repeat url("../../../images/main/header/women.jpg");
+        background: no-repeat url("./images/women.jpg");
       }
       .men {
         flex: 1 1 255px;
-        background: no-repeat url("../../../images/main/header/men.jpg");
+        background: no-repeat url("./images/men.jpg");
       }
     }
     .accessories {
-      background: no-repeat url("../../../images/main/header/accessories.jpg");
+      background: no-repeat url("./images/accessories.jpg");
     }
     .women,
     .men,

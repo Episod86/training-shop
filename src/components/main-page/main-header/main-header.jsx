@@ -1,5 +1,6 @@
-import prevImg from "../../../images/product-page//button-prev.svg";
+import prevImg from "../../../images/product-page/button-prev.svg";
 import nextImg from "../../../images/product-page/button-next.svg";
+
 import "./main-header.scss";
 
 export const MainHeader = () => {
