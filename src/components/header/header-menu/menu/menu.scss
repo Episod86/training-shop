@@ -1,0 +1,46 @@
+.menu {
+  display: flex;
+  cursor: pointer;
+  .menu-item {
+    line-height: 16px;
+    align-items: center;
+    padding: 25px 16px;
+  }
+}
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.1;
+  &.active {
+    display: block;
+  }
+}
+
+@media all and (max-width: 1010px) {
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    background: #ffffff;
+    transform: translateX(-100%);
+    transition: 0.2s all linear;
+    opacity: 0.9;
+    z-index: 9;
+    &.active {
+      transform: translateX(0);
+    }
+    .menu-item {
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}

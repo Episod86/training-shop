@@ -1,0 +1,33 @@
+.useful-links {
+  display: flex;
+  gap: 30px;
+  .burger-menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    cursor: pointer;
+    &.active {
+      position: relative;
+      .burger-line-second {
+        display: none;
+      }
+      .burger-line-first {
+        transform: translateY(11px) rotate(45deg);
+      }
+      .burger-line-third {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+    }
+  }
+}
+@media all and (max-width: 1010px) {
+  .useful-links {
+    .burger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10;
+    }
+  }
+}
