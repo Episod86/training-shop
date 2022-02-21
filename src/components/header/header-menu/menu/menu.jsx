@@ -15,7 +15,7 @@ export const Menu = ({ isBurgerActive, setIsBurgerActive }) => {
     <div>
       <div
         className={classNames("menu", { active: isBurgerActive })}
-        data-test-id="menu"
+        data-test-id="burger-menu"
       >
         {menu.map(({ id, path, name }) => (
           <Link

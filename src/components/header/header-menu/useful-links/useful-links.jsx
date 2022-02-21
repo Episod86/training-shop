@@ -23,6 +23,7 @@ export const UsefulLinks = ({ isBurgerActive, setIsBurgerActive }) => {
       <div
         className={classNames("burger-menu", { active: isBurgerActive })}
         onClick={onSetIsBurgerActive}
+        data-test-id="burger-menu-btn"
       >
         <hr className="burger-line-first" />
         <hr className="burger-line-second" />
