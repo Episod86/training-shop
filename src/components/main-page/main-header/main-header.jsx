@@ -1,19 +1,32 @@
-import prevImg from "../../../images/product-page/button-prev.svg";
-import nextImg from "../../../images/product-page/button-next.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
+import { sliderMain } from "../../../constants/main";
+import "swiper/scss";
+import "swiper/scss/navigation";
 import "./main-header.scss";
 
 export const MainHeader = () => {
   return (
     <div className="main-header">
       <div className="banner">
-        <img src={prevImg} alt="prev" />
-        <div className="item-text">
-          <div className="title">Banner</div>
-          <div className="text">your Title text </div>
-        </div>
-        <img src={nextImg} alt="next" />
+        <Swiper
+          modules={[Navigation]}
+          navigation={true}
+          className="main-slider"
+        >
+          {sliderMain.map(({ id, title, text, imageSrc, alt }) => (
+            <SwiperSlide key={id}>
+              <img src={imageSrc} alt={alt} />
+              <div className="item-text">
+                <div className="title">{title}</div>
+                <div className="text">{text}</div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+
       <div className="nav">
         <div className="categories">
           <div className="women">

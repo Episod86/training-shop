@@ -1,3 +1,5 @@
+import banner from "../components/main-page/main-header/images/banner.jpg";
+
 import truck from "../components/main-page/advantage/images/truck.svg";
 import refresh from "../components/main-page/advantage/images/refresh.svg";
 import support from "../components/main-page/advantage/images/support.svg";
@@ -6,6 +8,29 @@ import easiest from "../components/main-page/main-blog/images/easiest.jpg";
 import wedding from "../components/main-page/main-blog/images/wedding.jpg";
 import favorites from "../components/main-page/main-blog/images/favorites.jpg";
 
+export const sliderMain = [
+  {
+    id: "1",
+    title: "FREE Banner",
+    text: "your Title text ",
+    imageSrc: banner,
+    alt: "banner",
+  },
+  {
+    id: "2",
+    title: "FREE Banner",
+    text: "your Title text ",
+    imageSrc: banner,
+    alt: "banner",
+  },
+  {
+    id: "3",
+    title: "FREE Banner",
+    text: "your Title text ",
+    imageSrc: banner,
+    alt: "banner",
+  },
+];
 export const advantage = [
   {
     key: "1",
