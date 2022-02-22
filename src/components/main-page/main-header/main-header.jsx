@@ -9,7 +9,7 @@ import "./main-header.scss";
 export const MainHeader = () => {
   return (
     <div className="main-header">
-      <div className="banner">
+      <div className="banner" data-test-id="main-slider">
         <Swiper
           modules={[Navigation]}
           navigation={true}

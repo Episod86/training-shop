@@ -1,8 +1,11 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+
 import { Rating } from "../../rating/rating";
 
 import { productItem } from "../../../constants/product";
 
-import prevImg from "../../../images/product-page//button-prev.svg";
+import prevImg from "../../../images/product-page/button-prev.svg";
 import nextImg from "../../../images/product-page/button-next.svg";
 
 import "./related-products.scss";
@@ -10,27 +13,40 @@ import "./related-products.scss";
 export const RelatedProducts = () => {
   return (
     <div className="related-products">
-      <div className="related-products-title">
-        <div className="title">RELATED PRODUCTS</div>
-        <div className="navigation">
-          <img src={prevImg} alt="prev" />
-          <img src={nextImg} alt="next" />
-        </div>
-      </div>
-
-      <div className="related-produts-items">
-        {productItem.map(({ key, title, price, imageSrc }) => (
-          <div className="item" key={key}>
-            <img src={imageSrc} alt="photoProduct" />
-            <div className="item-text">
-              <div className="item-text-title">{title}</div>
-              <div className="item-text-inform">
-                <div className="item-text-price">{price}</div>
-                <Rating rating={4} size="14px" />
-              </div>
-            </div>
+      <div className="related-slider" data-test-id="related-slider">
+        <div className="slider-products-title">
+          <div className="title">RELATED PRODUCTS</div>
+          <div className="slider-navigation">
+            <img className="btn-prev" src={prevImg} alt="prev" />
+            <img className="btn-next" src={nextImg} alt="next" />
           </div>
-        ))}
+        </div>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          slidesPerGroup={1}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          navigation={{
+            nextEl: ".btn-next",
+            prevEl: ".btn-prev",
+          }}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {productItem.map(({ key, title, price, imageSrc }) => (
+            <SwiperSlide key={key}>
+              <img src={imageSrc} alt="photoProduct" />
+              <div className="item-text">
+                <div className="item-text-title">{title}</div>
+                <div className="item-text-inform">
+                  <div className="item-text-price">{price}</div>
+                  <Rating rating={4} size="14px" />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
