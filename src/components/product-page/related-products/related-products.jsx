@@ -8,6 +8,8 @@ import { productItem } from "../../../constants/product";
 import prevImg from "../../../images/product-page/button-prev.svg";
 import nextImg from "../../../images/product-page/button-next.svg";
 
+import "swiper/scss";
+import "swiper/scss/navigation";
 import "./related-products.scss";
 
 export const RelatedProducts = () => {
@@ -22,8 +24,19 @@ export const RelatedProducts = () => {
           </div>
         </div>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={1}
           spaceBetween={30}
+          breakpoints={{
+            570: {
+              slidesPerView: 2,
+            },
+            830: {
+              slidesPerView: 3,
+            },
+            1100: {
+              slidesPerView: 4,
+            },
+          }}
           slidesPerGroup={1}
           loop={true}
           loopFillGroupWithBlank={true}
@@ -32,7 +45,8 @@ export const RelatedProducts = () => {
             prevEl: ".btn-prev",
           }}
           modules={[Navigation]}
-          className="mySwiper"
+          // mousewheel={true}
+          className="related-swiper"
         >
           {productItem.map(({ key, title, price, imageSrc }) => (
             <SwiperSlide key={key}>

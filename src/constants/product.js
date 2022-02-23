@@ -1,7 +1,8 @@
 import itemsliderFirst from "../images/product-page/card-product/product-slider-first.jpg";
-import itemsliderSecond from "../images/product-page/card-product/product-slider-second.jpg";
-import itemsliderTrird from "../images/product-page/card-product/product-slider-trird.jpg";
-import itemsliderFourth from "../images/product-page/card-product/product-slider-fourth.jpg";
+// import itemsliderSecond from "../images/product-page/card-product/product-slider-second.jpg";
+// import itemsliderTrird from "../images/product-page/card-product/product-slider-trird.jpg";
+// import itemsliderFourth from "../images/product-page/card-product/product-slider-fourth.jpg";
+import mainPhoto from "../images/product-page/card-product/product-image.jpg";
 
 import blueImg from "../images/product-page/card-product/color-blue.jpg";
 import whiteImg from "../images/product-page/card-product/color-white.jpg";
@@ -30,22 +31,41 @@ import itemImgSecond from "../images/product-page/related-products/related-secon
 import itemImgTrird from "../images/product-page/related-products/related-trird.jpg";
 import itemImgFourth from "../images/product-page/related-products/related-fourth.jpg";
 
-export const productSlider = [
+export const productSliderSmall = [
   {
     key: "1",
     imageSrc: itemsliderFirst,
   },
   {
     key: "2",
-    imageSrc: itemsliderSecond,
+    imageSrc: itemsliderFirst,
   },
   {
     key: "3",
-    imageSrc: itemsliderTrird,
+    imageSrc: itemsliderFirst,
   },
   {
     key: "4",
-    imageSrc: itemsliderFourth,
+    imageSrc: itemsliderFirst,
+  },
+];
+
+export const productSlider = [
+  {
+    key: "1",
+    imageSrc: mainPhoto,
+  },
+  {
+    key: "2",
+    imageSrc: mainPhoto,
+  },
+  {
+    key: "3",
+    imageSrc: mainPhoto,
+  },
+  {
+    key: "4",
+    imageSrc: mainPhoto,
   },
 ];
 export const colorImg = [
