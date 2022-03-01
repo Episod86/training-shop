@@ -1,1 +1,1 @@
-export { CardsProducts } from "././cards-products";
+export { CardsProducts } from "./cards-products";

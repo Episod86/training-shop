@@ -33,6 +33,7 @@
     .item {
       display: flex;
       flex-direction: column;
+      img {max-width: 255px;}
     }
 
     .item-text {
