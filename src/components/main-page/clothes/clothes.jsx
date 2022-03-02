@@ -16,7 +16,7 @@ export const Clothes = ({ productType }) => {
     <div className="clothes" data-test-id={`clothes-${productType}`}>
       <div className="clothes-header">
         <div className="title">{`${productType}'s`}</div>
-        <div className="menu">
+        <div className="clothes-menu">
           {clothesMenu.map(({ name, particularName }) => (
             <div
               className={classNames("item", {
