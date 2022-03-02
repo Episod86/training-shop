@@ -19,7 +19,7 @@
       line-height: 13px;
       letter-spacing: 0.06em;
       .item {
-        &:not(:first-child) {
+        &:not(.selected) {
           opacity: 0.6;
         }
       }
@@ -30,32 +30,48 @@
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
     gap: 30px;
+    position: relative;
+    .discount {
+      max-width: 53px;
+      padding: 9px 8px;
+      position: absolute;
+
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 13px;
+      text-align: center;
+      background: rgb(219, 45, 45);
+
+      color: #ffffff;
+    }
     .item {
       display: flex;
       flex-direction: column;
-      img {max-width: 255px;}
+      img {
+        max-width: 255px;
+      }
     }
 
-    .item-text {
+    // .item-text {
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 12px;
+    //   padding-top: 16px;
+    //   line-height: 16px;
+
+    .item-text-title {
+      opacity: 0.6;
+    }
+    .item-text-inform {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-top: 16px;
-      line-height: 16px;
+      justify-content: space-between;
+      align-items: center;
 
-      .item-text-title {
-        opacity: 0.6;
-      }
-      .item-text-inform {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .item-text-price {
-          font-weight: bold;
-        }
+      .item-text-price {
+        font-weight: bold;
       }
     }
+    // }
   }
   .button {
     background: #f8f8f8;

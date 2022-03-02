@@ -56,24 +56,24 @@ export const advantage = [
 ];
 export const clothesMenu = [
   {
-    id: "1",
     name: "NEW ARRIVALS",
+    particularName: "isNewArrivals",
   },
   {
-    id: "2",
     name: "SPECIALS",
+    particularName: "isSpecial",
   },
   {
-    id: "3",
     name: "BESTSELLERS",
+    particularName: "isBestseller",
   },
   {
-    id: "4",
     name: "MOST VIEWED",
+    particularName: "isMostViewed",
   },
   {
-    id: "5",
     name: "FEATURED PRODUCTS",
+    naparticularName: "isFeatured",
   },
 ];
 export const mainBlog = [
