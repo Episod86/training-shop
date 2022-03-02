@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
+import PropTypes from "prop-types";
 
-import { Rating } from "../../rating/rating";
+import { ClothesItem } from "../clothes-item";
 
 import { clothesMenu } from "../../../constants/main";
 import { PRODUCTS } from "../../../constants/products";
 
 import "./clothes.scss";
-import classNames from "classnames";
 
 export const Clothes = ({ productType }) => {
   const [particular, setParticular] = useState(clothesMenu[0].particularName);
@@ -40,25 +41,15 @@ export const Clothes = ({ productType }) => {
           .filter((product) => product?.particulars[particular])
           .filter((e, index) => index <= 7)
           .map(({ id, price, images, rating, discount, name }) => (
-            <Link
-              to={`/${productType}/${id}`}
-              className="item"
-              key={id}
-              data-test-id={`clothes-card-${productType}`}
-            >
-              {discount && <span className="discount">{discount}</span>}
-              <img
-                src={`https://training.cleverland.by/shop${images[0]?.url}`}
-                alt="photoProduct"
-              />
-              <div className="item-text">
-                <div className="item-text-title">{name}</div>
-                <div className="item-text-inform">
-                  <div className="item-text-price">$ {price}</div>
-                  <Rating rating={rating} size="14px" />
-                </div>
-              </div>
-            </Link>
+            <ClothesItem
+              id={id}
+              price={price}
+              images={images}
+              rating={rating}
+              discount={discount}
+              name={name}
+              productType={productType}
+            />
           ))}
       </div>
       <Link to={`/${productType}`} className="cards-link">
@@ -68,4 +59,8 @@ export const Clothes = ({ productType }) => {
       </Link>
     </div>
   );
+};
+
+Clothes.propTypes = {
+  productType: PropTypes.string.isRequired,
 };
