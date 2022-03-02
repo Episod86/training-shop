@@ -73,7 +73,7 @@ export const clothesMenu = [
   },
   {
     name: "FEATURED PRODUCTS",
-    naparticularName: "isFeatured",
+    particularName: "isFeatured",
   },
 ];
 export const mainBlog = [

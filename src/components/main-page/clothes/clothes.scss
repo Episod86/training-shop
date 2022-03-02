@@ -28,51 +28,11 @@
   }
   .clothes-cards {
     padding: 48px 0;
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 30px;
     position: relative;
-    .discount {
-      max-width: 53px;
-      padding: 9px 8px;
-      position: absolute;
-
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 13px;
-      text-align: center;
-      background: rgb(219, 45, 45);
-
-      color: #ffffff;
-    }
-    .item {
-      display: flex;
-      flex-direction: column;
-      img {
-        max-width: 255px;
-      }
-    }
-
-    .item-text {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-top: 16px;
-      line-height: 16px;
-
-      .item-text-title {
-        opacity: 0.6;
-      }
-      .item-text-inform {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .item-text-price {
-          font-weight: bold;
-        }
-      }
-    }
   }
   .button {
     background: #f8f8f8;
@@ -89,24 +49,17 @@
   }
 }
 
-@media all and (max-width: 1165px) {
+@media all and (max-width: 900px) {
   .clothes {
     padding: 24px 0;
-
-    .clothes-cards {
-      grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-    }
-  }
-}
-
-@media all and (max-width: 900px) {
-  .clothes .clothes-header {
-    .title {
-      font-size: 16px;
-    }
-    .clothes-menu {
-      gap: 8px;
-      font-size: 11px;
+    .clothes-header {
+      .title {
+        font-size: 16px;
+      }
+      .clothes-menu {
+        gap: 8px;
+        font-size: 11px;
+      }
     }
   }
 }
@@ -117,11 +70,5 @@
     .clothes-menu {
       flex-direction: column;
     }
-  }
-}
-
-@media all and (max-width: 585px) {
-  .clothes .clothes-cards {
-    grid-template: repeat(8, 1fr) / 1fr;
   }
 }

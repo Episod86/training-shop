@@ -10,13 +10,13 @@ import "./cards-products.scss";
 
 export const CardsProducts = ({ productType }) => {
   // {
-  console.log(PRODUCTS);
+  // console.log(PRODUCTS);
   // }
   return (
     <div className="cards-products">
       <div className="cards">
         {PRODUCTS[productType]
-          .filter((_, index) => index <= 7)
+          // .filter((_, index) => index <= 7)
           .map(({ id, title, price, images, imageSrc }) => (
             <Link to={`/${productType}/${id}`} className="item" key={id}>
               <img
