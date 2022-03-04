@@ -1,0 +1,28 @@
+.filter-activate {
+  cursor: pointer;
+  .open-filter {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .close-filter {
+    // display: flex;
+    // gap: 12px;
+    // align-items: center;
+    width: 32px;
+    height: 32px;
+    hr {
+      &:first-child {
+        transform: translateY(2px) rotate(45deg);
+      }
+      &:last-child {
+        transform: translateY(-2px) rotate(-45deg);
+      }
+    }
+  }
+}

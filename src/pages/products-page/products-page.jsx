@@ -7,7 +7,7 @@ export const ProductsPage = ({ productType }) => {
     <div data-test-id={`products-page-${productType}`}>
       <HeaderProducts productType={productType} />
       <div className="wrapper">
-        <FilterProducts />
+        <FilterProducts productType={productType} />
         <CardsProducts productType={productType} />
       </div>
     </div>

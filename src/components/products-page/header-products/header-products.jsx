@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import shareSrc from "../../../images/share.svg";
 
 import "./header-products.scss";
@@ -8,9 +10,13 @@ export const HeaderProducts = ({ productType }) => {
       <div className="wrapper">
         <div className="header-product-nav">
           <div className="links">
-            <span className="previous">Home</span>
+            <Link to={`/`} className="previous">
+              Home
+            </Link>
             <span>►</span>
-            <span className="previous categories">{productType}</span>
+            <Link to={`/${productType}/`} className="previous categories">
+              {productType}
+            </Link>
           </div>
           <div className="share">
             <img src={shareSrc} alt="share" />
