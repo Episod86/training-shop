@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Rating } from "../../rating/rating";
 import { Slider } from "./slider";
@@ -10,12 +10,11 @@ import heartImg from "../../../images/product-page/card-product/heart.svg";
 import scaleImg from "../../../images/product-page/card-product/scale.svg";
 
 import "./card-product.scss";
+import classNames from "classnames";
 
 export const CardProduct = ({
   product: { images, name, sizes, price, reviews, rating, material },
 }) => {
-  console.log({ sizes });
-
   const [selectedColor, setSelectedColor] = useState(images[0]?.color);
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
 
@@ -23,7 +22,10 @@ export const CardProduct = ({
     if (!acc.find((item) => item.color === image.color)) acc.push(image);
     return acc;
   }, []);
-  console.log({ uniqueColor });
+  // useEffect(() => {
+  //   setSelectedColor(images[0]?.color);
+  //   setSelectedSize(sizes[0]);
+  // }, [images, sizes]);
 
   return (
     <div className="card-product">
@@ -43,6 +45,7 @@ export const CardProduct = ({
                   setSelectedColor(color);
                 }}
                 alt={name}
+                className={classNames({ selected: color === selectedColor })}
               />
             ))}
           </div>
@@ -60,6 +63,7 @@ export const CardProduct = ({
                 onClick={() => {
                   setSelectedSize(item);
                 }}
+                className={classNames({ selected: item === selectedSize })}
               >
                 {item}
               </button>
@@ -127,7 +131,7 @@ export const CardProduct = ({
           <div className="write-review">
             <div className="rating">
               <Rating rating={rating} size="22px" />
-              <span className="review">2 Reviews</span>
+              <span className="review">{`${reviews.length}  Reviews`} </span>
             </div>
             <span>Write a review</span>
           </div>

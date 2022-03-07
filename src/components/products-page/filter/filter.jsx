@@ -3,7 +3,7 @@ import { FilterPrice } from "../../../constants/filter-price";
 
 import "./filter.scss";
 
-export const Filter = ({ productType }) => {
+export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
   const giveUniqueColor = () =>
     PRODUCTS[productType].reduce(
       (acc, product) =>
@@ -37,7 +37,7 @@ export const Filter = ({ productType }) => {
         <div className="title">SIZE</div>
         <div className="filters">
           {giveUniqueSize().map((sizes) => (
-            <label>
+            <label onChange={(e) => onCheckProducts(e, type, min, max)}>
               <input type="checkbox" />
               <span>{sizes}</span>
             </label>

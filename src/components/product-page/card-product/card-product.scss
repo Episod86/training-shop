@@ -35,12 +35,18 @@
         background: #f8f8f8;
         padding: 14px 12px;
         cursor: pointer;
+        &.selected {
+          border: 3px solid rgb(28, 26, 26);
+        }
       }
     }
     .color {
       padding-bottom: 16px;
       img {
         max-width: 64px;
+        &.selected {
+          border: 3px solid rgb(28, 26, 26);
+        }
       }
     }
     &:first-child {
@@ -77,6 +83,7 @@
       padding: 17px 24px 16px;
       margin: 32px 0;
       border: none;
+
       .text {
         font-weight: 500;
         font-size: 13px;
@@ -87,6 +94,7 @@
         opacity: 0.9;
       }
     }
+
     img {
       padding-left: 4px;
     }

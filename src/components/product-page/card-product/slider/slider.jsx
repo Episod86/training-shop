@@ -14,6 +14,8 @@ export const Slider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [swiper, setSwiper] = useState(null);
 
+  const NumberOfSlides = images.length < 4 ? images.length : 4;
+
   return (
     <div className="slider" data-test-id="product-slider">
       <div className="slider-left">
@@ -38,7 +40,7 @@ export const Slider = ({ images }) => {
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
-          slidesPerView={4}
+          slidesPerView={NumberOfSlides}
           slidesPerGroup={1}
           freeMode={true}
           watchSlidesProgress={true}

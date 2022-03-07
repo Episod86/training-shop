@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+// import { useEffect } from "react";
+
 import { CardProduct } from "../../components/product-page/card-product";
 import { HeaderProduct } from "../../components/product-page/header-product";
 import { RelatedProducts } from "../../components/product-page/related-products";
@@ -16,6 +18,7 @@ export const ProductPage = ({ productType }) => {
         productType={productType}
         name={product.name}
         rating={product.rating}
+        reviews={product.reviews}
       />
       <div className="wrapper">
         <CardProduct product={product} />

@@ -5,7 +5,8 @@ import shareSrc from "../../../images/share.svg";
 import "./header-product.scss";
 import { Link } from "react-router-dom";
 
-export const HeaderProduct = ({ productType, name, rating }) => {
+export const HeaderProduct = ({ productType, name, rating, reviews }) => {
+  console.log({ reviews });
   return (
     <div className="header-product">
       <div className="wrapper">
@@ -31,7 +32,7 @@ export const HeaderProduct = ({ productType, name, rating }) => {
         <div className="subtitle">
           <div className="rating">
             <Rating rating={rating} size="18px" />
-            <span className="review">2 Reviews</span>
+            <span className="review">{`${reviews.length}  Reviews`}</span>
           </div>
           <div className="header-inform">
             <span className="inform-normal">SKU:</span>
