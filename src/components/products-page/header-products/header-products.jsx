@@ -14,9 +14,7 @@ export const HeaderProducts = ({ productType }) => {
               Home
             </Link>
             <span>►</span>
-            <Link to={`/${productType}/`} className="previous categories">
-              {productType}
-            </Link>
+            <span className="previous categories">{productType}</span>
           </div>
           <div className="share">
             <img src={shareSrc} alt="share" />

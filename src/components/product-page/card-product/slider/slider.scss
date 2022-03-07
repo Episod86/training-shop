@@ -18,9 +18,11 @@
     }
   }
   .mySwiper .swiper-slide {
-    width: 25%;
-    height: 100%;
+    // height: 100%;
     opacity: 0.4;
+    img {
+      max-width: 94px;
+    }
   }
 
   .mySwiper .swiper-slide-thumb-active {

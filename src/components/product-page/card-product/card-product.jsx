@@ -1,44 +1,68 @@
-import { Rating } from "../../rating/rating";
+import { useState } from "react";
 
-import {
-  colorImg,
-  sizeImg,
-  serviceItem,
-  checoutItem,
-  reviewItem,
-} from "../../../constants/product";
+import { Rating } from "../../rating/rating";
+import { Slider } from "./slider";
+
+import { serviceItem, checoutItem } from "../../../constants/product";
 
 import clothesHanger from "../../../images/product-page/card-product/clothes-hanger.svg";
 import heartImg from "../../../images/product-page/card-product/heart.svg";
 import scaleImg from "../../../images/product-page/card-product/scale.svg";
 
 import "./card-product.scss";
-import { Slider } from "./slider";
 
-export const CardProduct = () => {
+export const CardProduct = ({
+  product: { images, name, sizes, price, reviews, rating, material },
+}) => {
+  console.log({ sizes });
+
+  const [selectedColor, setSelectedColor] = useState(images[0]?.color);
+  const [selectedSize, setSelectedSize] = useState(sizes[0]);
+
+  const uniqueColor = images.reduce((acc, image) => {
+    if (!acc.find((item) => item.color === image.color)) acc.push(image);
+    return acc;
+  }, []);
+  console.log({ uniqueColor });
+
   return (
     <div className="card-product">
-      <Slider />
+      <Slider images={images} />
       <div className="inform">
         <div className="informName">
           <div>
             <span className="text">Color:</span>
-            <span>Blue</span>
+            <span>{selectedColor}</span>
           </div>
           <div className="inform-img color">
-            {colorImg.map(({ key, name, imageSrc }) => (
-              <img key={key} src={imageSrc} alt={name} />
+            {uniqueColor.map(({ color, url }) => (
+              <img
+                key={color}
+                src={`https://training.cleverland.by/shop${url}`}
+                onClick={() => {
+                  setSelectedColor(color);
+                }}
+                alt={name}
+              />
             ))}
           </div>
         </div>
         <div className="informName">
           <div>
             <span className="text">Size:</span>
-            <span>S</span>
+            <span>{selectedSize}</span>
           </div>
           <div className="inform-img">
-            {sizeImg.map(({ key, name, imageSrc }) => (
-              <img key={key} src={imageSrc} alt={name} />
+            {sizes.map((item) => (
+              <button
+                type="button"
+                key={item}
+                onClick={() => {
+                  setSelectedSize(item);
+                }}
+              >
+                {item}
+              </button>
             ))}
           </div>
           <div className="size-guide">
@@ -48,7 +72,7 @@ export const CardProduct = () => {
         </div>
 
         <div className="price">
-          <span className="price-bold">$ 379.99</span>
+          <span className="price-bold">{`$ ${price}`}</span>
           <button className="btn-price">
             <span className="text"> Add to card</span>
           </button>
@@ -77,15 +101,24 @@ export const CardProduct = () => {
           <div className="content">
             <div className="item">
               <span className="bold">Color:</span>
-              <span className="value">Blue, White, Black, Grey</span>
+              <span className="value">
+                {uniqueColor.map(({ color }) => (
+                  <span>{`${color} `}</span>
+                ))}
+              </span>
             </div>
             <div className="item">
               <span className="bold">Size:</span>
-              <span className="value">XS, S, M, L</span>
+
+              <span className="value">
+                {sizes.map((item) => (
+                  <span>{`${item}`}</span>
+                ))}
+              </span>
             </div>
             <div className="item">
               <span className="bold">Material: </span>
-              <span className="value">100% Polyester</span>
+              <span className="value">{material}</span>
             </div>
           </div>
         </div>
@@ -93,17 +126,17 @@ export const CardProduct = () => {
           <div className="title">REVIEWS</div>
           <div className="write-review">
             <div className="rating">
-              <Rating rating={5} size="22px" />
+              <Rating rating={rating} size="22px" />
               <span className="review">2 Reviews</span>
             </div>
             <span>Write a review</span>
           </div>
           <div className="reviews-items">
-            {reviewItem.map(({ key, text, name }) => (
-              <div key={key} className="item">
+            {reviews.map(({ id, text, name, rating }) => (
+              <div key={id} className="item">
                 <div className="title-reviews">
                   <span>{name}</span>
-                  <Rating rating={5} size="14px" />
+                  <Rating rating={rating} size="14px" />
                 </div>
                 <span className="text">{text}</span>
               </div>

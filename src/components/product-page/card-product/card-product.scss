@@ -27,9 +27,21 @@
       justify-content: flex-start;
       gap: 16px;
       padding-top: 16px;
+      & button {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 13px;
+        border: none;
+        background: #f8f8f8;
+        padding: 14px 12px;
+        cursor: pointer;
+      }
     }
     .color {
       padding-bottom: 16px;
+      img {
+        max-width: 64px;
+      }
     }
     &:first-child {
       padding-top: 3px;

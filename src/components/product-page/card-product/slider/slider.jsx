@@ -3,11 +3,6 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 
-import {
-  productSlider,
-  productSliderSmall,
-} from "../../../../constants/product";
-
 import upImg from "../../../../images/product-page//button-up.svg";
 import downImg from "../../../../images/product-page/button-down.svg";
 
@@ -15,7 +10,7 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "./slider.scss";
 
-export const Slider = () => {
+export const Slider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [swiper, setSwiper] = useState(null);
 
@@ -55,9 +50,12 @@ export const Slider = () => {
             prevEl: ".btn-prev-product",
           }}
         >
-          {productSliderSmall.map(({ key, imageSrc }) => (
-            <SwiperSlide key={key}>
-              <img src={imageSrc} alt="photoProduct" />
+          {images.map(({ color, url }) => (
+            <SwiperSlide key={color}>
+              <img
+                src={`https://training.cleverland.by/shop${url}`}
+                alt="photoProduct"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -70,9 +68,12 @@ export const Slider = () => {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        {productSlider.map(({ key, imageSrc }) => (
-          <SwiperSlide key={key}>
-            <img src={imageSrc} alt="photoProduct" />
+        {images.map(({ color, url }) => (
+          <SwiperSlide key={color}>
+            <img
+              src={`https://training.cleverland.by/shop${url}`}
+              alt="photoProduct"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
