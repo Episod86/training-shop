@@ -22,10 +22,10 @@ export const CardProduct = ({
     if (!acc.find((item) => item.color === image.color)) acc.push(image);
     return acc;
   }, []);
-  // useEffect(() => {
-  //   setSelectedColor(images[0]?.color);
-  //   setSelectedSize(sizes[0]);
-  // }, [images, sizes]);
+  useEffect(() => {
+    setSelectedColor(images[0]?.color);
+    setSelectedSize(sizes[0]);
+  }, [images, sizes]);
 
   return (
     <div className="card-product">

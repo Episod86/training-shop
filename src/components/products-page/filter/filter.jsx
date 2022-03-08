@@ -2,6 +2,7 @@ import { PRODUCTS } from "../../../constants/products";
 import { FilterPrice } from "../../../constants/filter-price";
 
 import "./filter.scss";
+import { FilterItem } from "../filter-item";
 
 export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
   const giveUniqueColor = () =>
@@ -26,10 +27,12 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
         <div className="title">COLOR</div>
         <div className="filters">
           {giveUniqueColor().map((color) => (
-            <label>
-              <input type="checkbox" />
-              <span>{color}</span>
-            </label>
+            <FilterItem
+              key={color}
+              text={color}
+              type="color"
+              onCheckProducts={onCheckProducts}
+            />
           ))}
         </div>
       </div>
@@ -37,10 +40,12 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
         <div className="title">SIZE</div>
         <div className="filters">
           {giveUniqueSize().map((sizes) => (
-            <label onChange={(e) => onCheckProducts(e, type, min, max)}>
-              <input type="checkbox" />
-              <span>{sizes}</span>
-            </label>
+            <FilterItem
+              key={sizes}
+              text={sizes}
+              type="sizes"
+              onCheckProducts={onCheckProducts}
+            />
           ))}
         </div>
       </div>
@@ -48,10 +53,12 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
         <div className="title">BRAND</div>
         <div className="filters">
           {giveUniqueBrand().map((brand) => (
-            <label>
-              <input type="checkbox" />
-              <span>{brand}</span>
-            </label>
+            <FilterItem
+              key={brand}
+              text={brand}
+              type="brand"
+              onCheckProducts={onCheckProducts}
+            />
           ))}
         </div>
       </div>
@@ -59,10 +66,12 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
         <div className="title">PRICE</div>
         <div className="filters">
           {FilterPrice.map(({ price }) => (
-            <label>
-              <input type="checkbox" />
-              <span>{price}</span>
-            </label>
+            <FilterItem
+              key={price}
+              text={price}
+              type="price"
+              onCheckProducts={onCheckProducts}
+            />
           ))}
         </div>
       </div>
