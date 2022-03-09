@@ -4,7 +4,11 @@ import "./filter-activate.scss";
 
 export const FilterActivate = ({ onToggleFilter, filterActive }) => {
   return (
-    <div className="filter-activate" onClick={onToggleFilter}>
+    <div
+      className="filter-activate"
+      onClick={onToggleFilter}
+      data-test-id="filter-button"
+    >
       {!filterActive ? (
         <div className="open-filter">
           <img src={adjustments} alt="adjustments" />

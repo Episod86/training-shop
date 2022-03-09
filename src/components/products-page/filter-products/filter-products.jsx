@@ -21,7 +21,6 @@ export const FilterProducts = ({ productType, onCheckProducts }) => {
         <FilterActivate
           onToggleFilter={onToggleFilter}
           filterActive={filterActive}
-          data-test-id="filter-button"
         />
         <div className="grid">
           <img src={list} alt="list" />
