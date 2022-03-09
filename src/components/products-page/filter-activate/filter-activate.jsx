@@ -1,26 +1,21 @@
-import adjustments from "../../../images/products-page/filter-procucts/adjustments.svg";
+import adjustments from "./images/adjustments.svg";
+import close from "./images/close.svg";
 
 import "./filter-activate.scss";
 
 export const FilterActivate = ({ onToggleFilter, filterActive }) => {
   return (
-    <div
+    <button
       className="filter-activate"
       onClick={onToggleFilter}
       data-test-id="filter-button"
-      area-hidden
     >
       {!filterActive ? (
-        <div className="open-filter">
-          <img src={adjustments} alt="adjustments" />
-          <span>Filter</span>
-        </div>
+        <img src={adjustments} alt="adjustments" />
       ) : (
-        <div className="close-filter">
-          <hr />
-          <hr />
-        </div>
+        <img src={close} alt="close" className="close" />
       )}
-    </div>
+      Filter
+    </button>
   );
 };

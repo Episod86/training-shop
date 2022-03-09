@@ -11,7 +11,7 @@ export const ProductsPage = ({ productType }) => {
   const [filteredProducts, setFilteredProducts] = useState(
     PRODUCTS[productType]
   );
-  debugger;
+  // debugger;
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -96,7 +96,7 @@ export const ProductsPage = ({ productType }) => {
   };
 
   useEffect(() => {
-    debugger;
+    // debugger;
 
     const filteredProductsArr = PRODUCTS[productType].filter(
       (product) =>
