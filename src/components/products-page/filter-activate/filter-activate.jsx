@@ -8,6 +8,7 @@ export const FilterActivate = ({ onToggleFilter, filterActive }) => {
       className="filter-activate"
       onClick={onToggleFilter}
       data-test-id="filter-button"
+      area-hidden
     >
       {!filterActive ? (
         <div className="open-filter">

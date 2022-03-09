@@ -16,6 +16,7 @@ export const CardsProducts = ({ productType, filteredProducts }) => {
               src={`https://training.cleverland.by/shop${images[0]?.url}`}
               alt="clothes"
               className="cards-item-img"
+              data-test-id={`clothes-card-${productType}`}
             />
             <div className="item-text">
               <div className="item-text-title">{title}</div>

@@ -11,6 +11,7 @@ export const ProductsPage = ({ productType }) => {
   const [filteredProducts, setFilteredProducts] = useState(
     PRODUCTS[productType]
   );
+  debugger;
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -95,6 +96,8 @@ export const ProductsPage = ({ productType }) => {
   };
 
   useEffect(() => {
+    debugger;
+
     const filteredProductsArr = PRODUCTS[productType].filter(
       (product) =>
         (!selectedColors.length || includeColors(product.images)) &&
@@ -111,7 +114,6 @@ export const ProductsPage = ({ productType }) => {
     includeColors,
     includeSizes,
     includePrices,
-
     productType,
   ]);
 

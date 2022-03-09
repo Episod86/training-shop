@@ -15,6 +15,9 @@
 
       .previous {
         opacity: 0.6;
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
     }
 
@@ -48,7 +51,6 @@
     .rating {
       display: flex;
       align-items: center;
-      // padding-bottom: 6px;
       .review {
         opacity: 0.6;
         padding-left: 6px;
