@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CardsProducts } from "../../components/products-page/cards-products";
 import { FilterProducts } from "../../components/products-page/filter-products";
 import { HeaderProducts } from "../../components/products-page/header-products";
@@ -16,27 +16,39 @@ export const ProductsPage = ({ productType }) => {
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
 
-  const includeColors = (images) => {
-    const filteredColors = images.filter((images) =>
-      selectedColors.includes(images?.color)
-    );
-    if (filteredColors.length > 0) return true;
-    return false;
-  };
-  const includeSizes = (sizes) => {
-    const filteredSizes = sizes.filter((size) => selectedSizes.includes(size));
-    if (filteredSizes.length > 0) return true;
-    return false;
-  };
+  const includeColors = useCallback(
+    (images) => {
+      const filteredColors = images.filter((images) =>
+        selectedColors.includes(images?.color)
+      );
+      if (filteredColors.length > 0) return true;
+      return false;
+    },
+    [selectedColors]
+  );
 
-  const includePrices = (price) => {
-    const filteredPrices = selectedPrices.filter(
-      (selectedPrice) =>
-        selectedPrice.min <= price && selectedPrice.max >= price
-    );
-    if (filteredPrices.length > 0) return true;
-    return false;
-  };
+  const includeSizes = useCallback(
+    (sizes) => {
+      const filteredSizes = sizes.filter((size) =>
+        selectedSizes.includes(size)
+      );
+      if (filteredSizes.length > 0) return true;
+      return false;
+    },
+    [selectedSizes]
+  );
+
+  const includePrices = useCallback(
+    (price) => {
+      const filteredPrices = selectedPrices.filter(
+        (selectedPrice) =>
+          selectedPrice.min <= price && selectedPrice.max >= price
+      );
+      if (filteredPrices.length > 0) return true;
+      return false;
+    },
+    [selectedPrices]
+  );
 
   const onCheckProducts = (e, type, min, max) => {
     switch (type) {
@@ -96,6 +108,9 @@ export const ProductsPage = ({ productType }) => {
     selectedSizes,
     selectedBrands,
     selectedPrices,
+    includeColors,
+    includeSizes,
+    includePrices,
 
     productType,
   ]);
