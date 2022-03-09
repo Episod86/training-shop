@@ -8,7 +8,7 @@ import grid from "../../../images/products-page/filter-procucts/view-grid.svg";
 
 import "./filter-products.scss";
 
-export const FilterProducts = ({ productType }) => {
+export const FilterProducts = ({ productType, onCheckProducts }) => {
   const [filterActive, setFilterActive] = useState(false);
 
   const onToggleFilter = () => {
@@ -29,7 +29,11 @@ export const FilterProducts = ({ productType }) => {
         </div>
       </div>
       {filterActive && (
-        <Filter productType={productType} filterActive={filterActive} />
+        <Filter
+          productType={productType}
+          filterActive={filterActive}
+          onCheckProducts={onCheckProducts}
+        />
       )}
     </div>
   );

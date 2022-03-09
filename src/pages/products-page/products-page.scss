@@ -1,0 +1,9 @@
+.filter-seach-result {
+  display: flex;
+  gap: 30px;
+  div {
+    &:first-child {
+      font-weight: 600;
+    }
+  }
+}

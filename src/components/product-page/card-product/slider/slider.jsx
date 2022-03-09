@@ -14,8 +14,6 @@ export const Slider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [swiper, setSwiper] = useState(null);
 
-  const NumberOfSlides = images.length < 4 ? images.length : 4;
-
   return (
     <div className="slider" data-test-id="product-slider">
       <div className="slider-left">
@@ -40,7 +38,7 @@ export const Slider = ({ images }) => {
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
-          slidesPerView={NumberOfSlides}
+          slidesPerView={images.length < 4 ? images.length : 4}
           slidesPerGroup={1}
           freeMode={true}
           watchSlidesProgress={true}
@@ -53,7 +51,7 @@ export const Slider = ({ images }) => {
           }}
         >
           {images.map(({ color, url }) => (
-            <SwiperSlide key={color}>
+            <SwiperSlide key={url}>
               <img
                 src={`https://training.cleverland.by/shop${url}`}
                 alt="photoProduct"
@@ -71,7 +69,7 @@ export const Slider = ({ images }) => {
         className="mySwiper2"
       >
         {images.map(({ color, url }) => (
-          <SwiperSlide key={color}>
+          <SwiperSlide key={url}>
             <img
               src={`https://training.cleverland.by/shop${url}`}
               alt="photoProduct"

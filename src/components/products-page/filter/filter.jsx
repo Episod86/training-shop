@@ -4,7 +4,7 @@ import { FilterPrice } from "../../../constants/filter-price";
 import "./filter.scss";
 import { FilterItem } from "../filter-item";
 
-export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
+export const Filter = ({ productType, onCheckProducts }) => {
   const giveUniqueColor = () =>
     PRODUCTS[productType].reduce(
       (acc, product) =>
@@ -22,10 +22,10 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
     Array.from(new Set(PRODUCTS[productType].map((product) => product.brand)));
 
   return (
-    <div className="filter">
+    <div className="filter" data-test-id={`filters-${productType}`}>
       <div className="color">
         <div className="title">COLOR</div>
-        <div className="filters">
+        <div className="filters" data-test-id="filters-color">
           {giveUniqueColor().map((color) => (
             <FilterItem
               key={color}
@@ -38,7 +38,7 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
       </div>
       <div className="size">
         <div className="title">SIZE</div>
-        <div className="filters">
+        <div className="filters" data-test-id="filters-size">
           {giveUniqueSize().map((sizes) => (
             <FilterItem
               key={sizes}
@@ -51,7 +51,7 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
       </div>
       <div className="brand">
         <div className="title">BRAND</div>
-        <div className="filters">
+        <div className="filters" data-test-id="filters-brand">
           {giveUniqueBrand().map((brand) => (
             <FilterItem
               key={brand}
@@ -65,8 +65,10 @@ export const Filter = ({ productType, onCheckProducts, type, min, max }) => {
       <div className="price">
         <div className="title">PRICE</div>
         <div className="filters">
-          {FilterPrice.map(({ price }) => (
+          {FilterPrice.map(({ price, min, max }) => (
             <FilterItem
+              min={min}
+              max={max}
               key={price}
               text={price}
               type="price"

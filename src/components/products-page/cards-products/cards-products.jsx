@@ -2,17 +2,15 @@ import { Rating } from "../../rating/rating";
 
 import { Link } from "react-router-dom";
 
-import { PRODUCTS } from "../../../constants/products";
-
 import loadig from "../../../images/products-page/cards-products/Square-Loading.png";
 
 import "./cards-products.scss";
 
-export const CardsProducts = ({ productType }) => {
+export const CardsProducts = ({ productType, filteredProducts }) => {
   return (
     <div className="cards-products">
       <div className="cards">
-        {PRODUCTS[productType].map(({ id, title, price, images }) => (
+        {filteredProducts.map(({ id, title, price, images, rating }) => (
           <Link to={`/${productType}/${id}`} className="item" key={id}>
             <img
               src={`https://training.cleverland.by/shop${images[0]?.url}`}
@@ -23,7 +21,7 @@ export const CardsProducts = ({ productType }) => {
               <div className="item-text-title">{title}</div>
               <div className="item-text-inform">
                 <div className="item-text-price">{price}</div>
-                <Rating rating={4} size="14" />
+                <Rating rating={rating} size="14" />
               </div>
             </div>
           </Link>
