@@ -121,6 +121,7 @@ export const ProductsPage = ({ productType }) => {
   ]);
 
   useEffect(() => {
+    // setFilterActive([]);
     setSelectedColors([]);
     setSelectedSizes([]);
     setSelectedBrands([]);

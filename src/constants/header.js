@@ -2,10 +2,9 @@ import phoneIcon from "../components/header/top-bar/images/phone.svg";
 import locationIcon from "../components/header/top-bar/images/location.svg";
 import clockIcon from "../components/header/top-bar/images/clock.svg";
 
-import search from "../images/header/search.svg";
-import globe from "../images/header/globe.svg";
-import user from "../images/header/user.svg";
-import shoppingBag from "../images/header/shopping-bag.svg";
+import search from "../components/header/header-menu/useful-links/images/search.svg";
+import globe from "../components/header/header-menu/useful-links/images/globe.svg";
+import user from "../components/header/header-menu/useful-links/images/user.svg";
 
 export const contacts = [
   {
@@ -79,9 +78,9 @@ export const usefulLinks = [
     imageSrc: user,
     name: "user",
   },
-  {
-    id: "4",
-    imageSrc: shoppingBag,
-    name: "shopping-bag",
-  },
+  // {
+  //   id: "4",
+  //   imageSrc: shoppingBag,
+  //   name: "shopping-bag",
+  // },
 ];

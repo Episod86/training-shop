@@ -4,6 +4,7 @@ import propTypes from "prop-types";
 import { usefulLinks } from "../../../../constants/header";
 
 import { enableBodyScroll, disableBodyScroll } from "../../../../utils/scroll";
+import { Cart } from "../../../cart";
 
 import "./useful-links.scss";
 
@@ -18,10 +19,11 @@ export const UsefulLinks = ({ isBurgerActive, setIsBurgerActive }) => {
   };
 
   return (
-    <div className="useful-links" aria-hidden onClick={onSetIsBurgerActive}>
+    <div className="useful-links">
       {usefulLinks.map(({ id, imageSrc, name }) => (
         <img src={imageSrc} alt={name} key={id} />
       ))}
+      <Cart />
       <div
         className={classNames("burger-menu", { active: isBurgerActive })}
         onClick={onSetIsBurgerActive}

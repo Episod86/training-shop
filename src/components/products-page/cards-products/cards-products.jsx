@@ -2,7 +2,7 @@ import { Rating } from "../../rating/rating";
 
 import { Link } from "react-router-dom";
 
-import loadig from "../../../images/products-page/cards-products/Square-Loading.png";
+import loadig from "./images/Square-Loading.png";
 
 import "./cards-products.scss";
 
