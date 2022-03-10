@@ -8,10 +8,11 @@ import { PRODUCTS } from "../../constants/products";
 import "./products-page.scss";
 
 export const ProductsPage = ({ productType }) => {
+  const [filterActive, setFilterActive] = useState();
+
   const [filteredProducts, setFilteredProducts] = useState(
     PRODUCTS[productType]
   );
-  // debugger;
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -94,10 +95,11 @@ export const ProductsPage = ({ productType }) => {
         console.log("неудачный поиск");
     }
   };
+  const onToggleFilter = () => {
+    setFilterActive(!filterActive);
+  };
 
   useEffect(() => {
-    // debugger;
-
     const filteredProductsArr = PRODUCTS[productType].filter(
       (product) =>
         (!selectedColors.length || includeColors(product.images)) &&
@@ -117,6 +119,14 @@ export const ProductsPage = ({ productType }) => {
     productType,
   ]);
 
+  useEffect(() => {
+    setSelectedColors([]);
+    setSelectedSizes([]);
+    setSelectedBrands([]);
+    setSelectedPrices([]);
+    setFilterActive(false);
+  }, [productType]);
+
   return (
     <div data-test-id={`products-page-${productType}`}>
       <HeaderProducts productType={productType} />
@@ -125,6 +135,8 @@ export const ProductsPage = ({ productType }) => {
           productType={productType}
           onCheckProducts={onCheckProducts}
           filteredProducts={filteredProducts}
+          onToggleFilter={onToggleFilter}
+          filterActive={filterActive}
         />
 
         {(selectedColors.length ||
@@ -162,6 +174,7 @@ export const ProductsPage = ({ productType }) => {
           </div>
         )}
         <CardsProducts
+          selectedColors={selectedColors}
           productType={productType}
           filteredProducts={filteredProducts}
         />

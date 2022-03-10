@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Filter } from "../filter";
 import { FilterActivate } from "../filter-activate";
 
@@ -8,13 +6,12 @@ import grid from "../../../images/products-page/filter-procucts/view-grid.svg";
 
 import "./filter-products.scss";
 
-export const FilterProducts = ({ productType, onCheckProducts }) => {
-  const [filterActive, setFilterActive] = useState(false);
-
-  const onToggleFilter = () => {
-    setFilterActive(!filterActive);
-  };
-
+export const FilterProducts = ({
+  productType,
+  onCheckProducts,
+  filterActive,
+  onToggleFilter,
+}) => {
   return (
     <div className="filter-products">
       <div className="filter-setting">
