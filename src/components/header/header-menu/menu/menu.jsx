@@ -24,7 +24,7 @@ export const Menu = ({ isBurgerActive, setIsBurgerActive }) => {
             to={`/${path}`}
             className="menu-item"
             data-test-id={`menu-link-${path}`}
-            onClick={onSetIsBurgerActive}
+            onClick={isBurgerActive && onSetIsBurgerActive}
           >
             <span>{name}</span>
           </Link>

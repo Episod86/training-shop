@@ -1,8 +1,8 @@
 import { Filter } from "../filter";
 import { FilterActivate } from "../filter-activate";
 
-import list from "../../../images/products-page/filter-procucts/view-list.svg";
-import grid from "../../../images/products-page/filter-procucts/view-grid.svg";
+import list from "./images/view-list.svg";
+import grid from "./images/view-grid.svg";
 
 import "./filter-products.scss";
 

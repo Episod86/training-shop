@@ -1,9 +1,16 @@
 .filter-seach-result {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
   div {
     &:first-child {
       font-weight: 600;
     }
+  }
+}
+
+@media all and (max-width: 600px) {
+  .filter-seach-result {
+    flex-direction: column;
   }
 }

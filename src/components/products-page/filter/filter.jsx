@@ -1,8 +1,9 @@
+import { FilterItem } from "../filter-item";
+
 import { PRODUCTS } from "../../../constants/products";
 import { FilterPrice } from "../../../constants/filter-price";
 
 import "./filter.scss";
-import { FilterItem } from "../filter-item";
 
 export const Filter = ({ productType, onCheckProducts }) => {
   const giveUniqueColor = () =>

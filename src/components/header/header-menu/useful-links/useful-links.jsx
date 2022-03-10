@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import propTypes from "prop-types";
+
 import { usefulLinks } from "../../../../constants/header";
 
 import { enableBodyScroll, disableBodyScroll } from "../../../../utils/scroll";
@@ -15,14 +16,16 @@ export const UsefulLinks = ({ isBurgerActive, setIsBurgerActive }) => {
       disableBodyScroll({ savePosition: true });
     }
   };
+
   return (
-    <div className="useful-links">
+    <div className="useful-links" aria-hidden onClick={onSetIsBurgerActive}>
       {usefulLinks.map(({ id, imageSrc, name }) => (
         <img src={imageSrc} alt={name} key={id} />
       ))}
       <div
         className={classNames("burger-menu", { active: isBurgerActive })}
         onClick={onSetIsBurgerActive}
+        aria-hidden
         data-test-id="burger-menu-btn"
       >
         <hr className="burger-line-first" />

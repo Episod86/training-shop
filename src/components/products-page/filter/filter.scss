@@ -23,5 +23,12 @@
   .filter {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, auto);
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .filter {
+    grid-template: repeat(4, 1fr) / 1fr;
   }
 }

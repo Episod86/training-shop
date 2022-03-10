@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+
 import { CardsProducts } from "../../components/products-page/cards-products";
 import { FilterProducts } from "../../components/products-page/filter-products";
 import { HeaderProducts } from "../../components/products-page/header-products";
@@ -8,15 +9,18 @@ import { PRODUCTS } from "../../constants/products";
 import "./products-page.scss";
 
 export const ProductsPage = ({ productType }) => {
-  const [filterActive, setFilterActive] = useState();
-
   const [filteredProducts, setFilteredProducts] = useState(
     PRODUCTS[productType]
   );
+  const [filterActive, setFilterActive] = useState();
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
+
+  const onToggleFilter = () => {
+    setFilterActive(!filterActive);
+  };
 
   const includeColors = useCallback(
     (images) => {
@@ -94,9 +98,6 @@ export const ProductsPage = ({ productType }) => {
       default:
         console.log("неудачный поиск");
     }
-  };
-  const onToggleFilter = () => {
-    setFilterActive(!filterActive);
   };
 
   useEffect(() => {

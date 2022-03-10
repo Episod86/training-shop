@@ -1,3 +1,5 @@
+import propTypes from "prop-types";
+
 import adjustments from "./images/adjustments.svg";
 import close from "./images/close.svg";
 
@@ -18,4 +20,9 @@ export const FilterActivate = ({ onToggleFilter, filterActive }) => {
       Filter
     </button>
   );
+};
+
+FilterActivate.propTypes = {
+  filterActive: propTypes.bool.isRequired,
+  onToggleFilter: propTypes.func.isRequired,
 };
