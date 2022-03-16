@@ -1,6 +1,11 @@
 .useful-links {
   display: flex;
   gap: 30px;
+  .cart-button {
+    border: none;
+    background-color: #ffffff;
+    margin: 8px;
+  }
   .burger-menu {
     display: none;
     width: 40px;

@@ -1,5 +1,8 @@
 import classNames from "classnames";
 import propTypes from "prop-types";
+import { useState } from "react";
+
+import cartImg from "../../../cart/images/cart.svg";
 
 import { usefulLinks } from "../../../../constants/header";
 
@@ -9,9 +12,20 @@ import { Cart } from "../../../cart";
 import "./useful-links.scss";
 
 export const UsefulLinks = ({ isBurgerActive, setIsBurgerActive }) => {
+  const [isCartActive, setIsCartActive] = useState(false);
+
   const onSetIsBurgerActive = () => {
     setIsBurgerActive(!isBurgerActive);
     if (isBurgerActive) {
+      enableBodyScroll();
+    } else {
+      disableBodyScroll({ savePosition: true });
+    }
+  };
+
+  const onSetIsCartActive = () => {
+    setIsCartActive(!isCartActive);
+    if (isCartActive) {
       enableBodyScroll();
     } else {
       disableBodyScroll({ savePosition: true });
@@ -23,7 +37,15 @@ export const UsefulLinks = ({ isBurgerActive, setIsBurgerActive }) => {
       {usefulLinks.map(({ id, imageSrc, name }) => (
         <img src={imageSrc} alt={name} key={id} />
       ))}
-      <Cart />
+
+      <button type="button" className="cart-button" onClick={onSetIsCartActive}>
+        <img src={cartImg} alt="cart" />
+      </button>
+      <Cart
+        isCartActive={isCartActive}
+        setIsCartActive={setIsCartActive}
+        onSetIsCartActive={onSetIsCartActive}
+      />
       <div
         className={classNames("burger-menu", { active: isBurgerActive })}
         onClick={onSetIsBurgerActive}
